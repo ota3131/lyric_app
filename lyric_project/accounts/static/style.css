@@ -1,0 +1,18 @@
+.messages {
+    padding: 0;
+    margin: 1em 0;
+    list-style: none;
+}
+.messages li {
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border-radius: 4px;
+}
+.messages li.error {
+    background-color: #fdd;
+    color: #a00;
+}
+.messages li.success {
+    background-color: #dfd;
+    color: #080;
+}

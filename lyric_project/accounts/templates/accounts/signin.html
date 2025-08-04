@@ -1,0 +1,15 @@
+<!-- accounts/templates/accounts/signin.html -->
+{% extends "accounts/base.html" %}
+
+{% block title %}ログイン - Lyric App{% endblock %}
+
+{% block content %}
+<h2>ログイン</h2>
+<form method="post">
+    {% csrf_token %}
+    <input type="text" name="username" placeholder="ユーザー名" required>
+    <input type="password" name="password" placeholder="パスワード" required>
+    <button type="submit">ログイン</button>
+</form>
+<p>アカウントをお持ちでないですか？ <a href="{% url 'signup' %}">新規登録</a></p>
+{% endblock %}

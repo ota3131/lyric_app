@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Lyric App{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Lyric App</h1>
+        <nav>
+            <a href="#">トップページ</a>
+            <a href="#">グループ一覧</a>
+            <a href="#">プロフィール</a>
+            <a href="#">ログアウト</a>
+        </nav>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <footer>
+        <p>&copy; 2025 Lyric App</p>
+    </footer>
+</body>
+</html>
