@@ -4,12 +4,28 @@
 {% block title %}ログイン - Lyric App{% endblock %}
 
 {% block content %}
+{% if success is not None %}
+    <script>
+        function amazingSample() {
+            {% if success %}
+                swal("成功！", "ログインに成功しました！", "success")
+                .then(() => {
+                    window.location.href = "{% url 'index' %}";
+                });
+            {% else %}
+                swal("ログインに失敗しました。", "もう一度お試しください。", "error");
+            {% endif %}
+        }
+        window.onload = amazingSample;
+    </script>
+{% endif %}
 <h2>ログイン</h2>
-<form method="post">
+<form method="post" action="{% url 'signin_view' %}">
     {% csrf_token %}
     <input type="text" name="username" placeholder="ユーザー名" required>
     <input type="password" name="password" placeholder="パスワード" required>
     <button type="submit">ログイン</button>
+
 </form>
 <p>アカウントをお持ちでないですか？ <a href="{% url 'signup' %}">新規登録</a></p>
 {% endblock %}

@@ -25,8 +25,8 @@ main/〇〇などのurlなどに移動して機能を使う感じ。
 プッシュ
 git add .                  
 git commit -m "コメント" 
-git push origin main
+git push origin new
 
 プル
-git pull origin main
+git pull origin new
 ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー

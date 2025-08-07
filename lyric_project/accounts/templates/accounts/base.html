@@ -1,4 +1,5 @@
 <!-- accounts/templates/accounts/base.html -->
+ {% load static %}
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -38,6 +39,10 @@
             background-color: #2980b9;
         }
     </style>
+    <!-- SweetAlert CDN -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- main.js を読み込む -->
+    <script src="{% static 'main.js' %}" defer></script>
 </head>
 <body>
     <div class="container">
